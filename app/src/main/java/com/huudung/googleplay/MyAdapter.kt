@@ -23,7 +23,7 @@ class MyAdapter(val data : ArrayList<ArrayItem>) : RecyclerView.Adapter<MyAdapte
     override fun onBindViewHolder(holder: MyAdapter.Holder, position: Int) {
         holder.title.text = data[position].title
         holder.RV.adapter = AnAdapter(data[position].Items)
-        holder.RV.layoutManager = LinearLayoutManager(holder.itemView.context, LinearLayoutManager.VERTICAL, false)
+        holder.RV.layoutManager = LinearLayoutManager(holder.itemView.context, LinearLayoutManager.HORIZONTAL, false)
     }
 
     override fun getItemCount(): Int {
